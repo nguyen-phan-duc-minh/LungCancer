@@ -1,0 +1,78 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-wrapper {
+    overflow: hidden;
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
+
+.footer-wrapper.hidden {
+    height: 0;
+    opacity: 0;
+    padding: 0;
+}
+
+.footer-wrapper.visible {
+    height: auto;
+    opacity: 1;
+}
+
+footer .Container {
+    height: 100%;
+    width: 85vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .Container p {
+    font-size: 15px;
+    color: rgba(41, 41, 220, 0.6);
+    font-style: italic;
+    font-weight: bold;
+}
+
+footer .Container p:hover {
+    color: rgba(41, 41, 220, 1);
+}
+
+footer .Container ul {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+footer .Container ul li {
+    margin-left: 1.5em;
+}
+
+footer .Container ul li a {
+    font-size: 15px;
+    color: rgba(41, 41, 220, 0.6);
+    font-weight: bold;
+    font-style: italic;
+}
+
+footer .Container ul li a:hover {
+    color: rgba(41, 41, 220, 1);
+}
+
+footer .Container ul li a svg {
+    margin-right: 0.5em;
+}
+
+@media screen and (max-width: 1023px) { 
+ footer {
+    display: none !important;
+ }   
+}

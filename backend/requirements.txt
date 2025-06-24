@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+torch
+torchvision
+Pillow
+python-multipart
+flask
+flask-cors
+timm
+flask_sqlalchemy
+flask_jwt_extended
+flask_session

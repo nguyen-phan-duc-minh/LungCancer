@@ -1,0 +1,147 @@
+header {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+}
+
+header.scrolled {
+    background-color: rgb(251, 251, 251);
+    box-shadow: 0 2px 8px rgba(41, 41, 220, 0.093);
+    height: 0;
+    opacity: 0;
+}
+
+header .Contain_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+header .Contain_img img {
+    height: 50px;
+    width: auto;
+    object-fit: cover;
+    filter: drop-shadow(1px 2px 2px rgba(41, 41, 220, 0.367));
+}
+
+header .Container {
+    height: 100%;
+    max-width: 85vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .Container ul {
+    display: flex;
+    align-items: center;
+}
+
+header .Container ul li {
+    margin-left: 2em
+}
+
+header .Container ul li a {
+    color:rgba(41, 41, 220, 0.554);
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+header .Container ul li a svg {
+    margin-right: 0.5em
+}
+
+header .Container ul li a:hover {
+    color:rgb(41, 41, 220);
+}
+
+header .LogOut {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: rgba(41, 41, 220, 0.554);
+    margin-left: 1.5em;
+    cursor: pointer;
+}
+
+header .LogOut:hover {
+    color: rgba(41, 41, 220);
+}
+
+/* Ẩn nút menu toggle trên màn lớn */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: rgba(41, 41, 220, 0.7);
+    cursor: pointer;
+}
+
+/* Trạng thái mặc định menu trên desktop */
+header .Container ul {
+    display: flex;
+    align-items: center;
+}
+
+/* Media query cho màn nhỏ */
+@media screen and (max-width: 1023px) {
+    /* Ẩn menu ul mặc định */
+    header .Container ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 80px; /* dưới header */
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        padding: 1rem 0;
+        z-index: 10000;
+    }
+
+    /* Hiện menu khi mở */
+    header .Container ul.open {
+        display: flex;
+    }
+
+    /* Hiện nút hamburger */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Khoảng cách giữa các item menu khi dọc */
+    header .Container ul li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    .UserInfor {
+        flex-direction: column;
+    }
+
+    .UserInfor a {
+        margin-left: 0 !important;
+        margin-bottom: 1.5em;
+    }
+
+    .LogOut {
+        margin-top: 0 !important;
+    }
+
+    /* Nút đăng xuất cho phù hợp */
+    header .LogOut {
+        margin-left: 0;
+        margin-top: 1em;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
