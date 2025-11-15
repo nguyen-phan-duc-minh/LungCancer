@@ -1,2 +1,2 @@
 **Author:** Nguyễn Phan Đức Minh  
-**Role:** AI Researcher | Deep Learning, Machine Learning, Education Technology
+**Role:** AI Researcher | Deep Learning, Machine Learning
